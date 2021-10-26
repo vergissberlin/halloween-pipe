@@ -119,11 +119,11 @@
         "effect": "1",
         "effectIntensity": 128,
         "effectSpeed": 128,
-        "name": "",
+        "name": "Testing",
         "palette": "0",
-        "preset": "",
+        "preset": 0,
         "state": "toggle",
-        "x": 320,
+        "x": 330,
         "y": 220,
         "wires": [
             []

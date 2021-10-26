@@ -72,11 +72,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 190,
-        "y": 160,
+        "x": 160,
+        "y": 220,
         "wires": [
             [
-                "fbaa4800.af2a78"
+                "711b4a34344c2c04"
             ]
         ]
     },

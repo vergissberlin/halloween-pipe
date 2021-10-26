@@ -7,6 +7,32 @@
         "info": ""
     },
     {
+        "id": "774c5d9f349893b7",
+        "type": "mqtt-broker",
+        "name": "shiftr.io",
+        "broker": "iotandrelademannde.cloud.shiftr.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
         "id": "79a4ebc4.3a83b4",
         "type": "inject",
         "z": "cfe087c2.deeed8",
@@ -102,5 +128,42 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "030b1d936d624a56",
+        "type": "mqtt in",
+        "z": "cfe087c2.deeed8",
+        "name": "button",
+        "topic": "/stat/halloween/button",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "774c5d9f349893b7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 340,
+        "wires": [
+            [
+                "dd0806a105f74f0c"
+            ]
+        ]
+    },
+    {
+        "id": "dd0806a105f74f0c",
+        "type": "debug",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 340,
+        "wires": []
     }
 ]

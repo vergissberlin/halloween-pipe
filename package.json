@@ -1,12 +1,20 @@
 {
-    "name": "halloween-pipe",
-    "description": "A spooky pipe in the night",
-    "version": "0.0.1",
-    "dependencies": {},
-    "node-red": {
-        "settings": {
-            "flowFile": "flows.json",
-            "credentialsFile": "flows_cred.json"
-        }
-    }
+	"name": "halloween-pipe",
+	"description": "A spooky pipe in the night",
+	"version": "0.0.1",
+	"repository": "https://github.com/vergissberlin/halloween-pipe",
+	"author": "André Lademann <vergissberlin@googlemail.com>",
+	"license": "MIT",
+	"node-red": {
+		"settings": {
+			"flowFile": "flows.json",
+			"credentialsFile": "flows_cred.json"
+		}
+	},
+	"scripts": {
+		"start": "node_modules/.bin/node-red - u . -s ./settings.js"
+	},
+	"dependencies": {
+		"node-red": "^2.1.3"
+	}
 }

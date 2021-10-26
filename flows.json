@@ -123,7 +123,7 @@
         "palette": "0",
         "preset": 0,
         "state": "toggle",
-        "x": 330,
+        "x": 440,
         "y": 220,
         "wires": [
             []
@@ -163,7 +163,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
+        "x": 450,
         "y": 340,
         "wires": []
     }

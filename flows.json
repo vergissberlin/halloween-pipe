@@ -79,5 +79,28 @@
                 "fbaa4800.af2a78"
             ]
         ]
+    },
+    {
+        "id": "711b4a34344c2c04",
+        "type": "wled2",
+        "z": "cfe087c2.deeed8",
+        "address": "",
+        "brightness": 128,
+        "delay": 0,
+        "color1": "#FFFFFF",
+        "color2": "#FFFFFF",
+        "color3": "#FFFFFF",
+        "effect": 0,
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "",
+        "palette": "0",
+        "preset": 0,
+        "state": "on",
+        "x": 320,
+        "y": 220,
+        "wires": [
+            []
+        ]
     }
 ]

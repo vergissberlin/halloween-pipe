@@ -1,1 +1,9 @@
-*.backup
+/*
+
+!/.gitignore
+!/flows.json
+!/flows_cred.json
+!/ghost
+!/package.json
+!/README.md
+!/yarn.lock

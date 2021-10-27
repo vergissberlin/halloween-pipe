@@ -556,7 +556,7 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "label": "Text: \"Oh Gewitter\"",
+        "label": "Oh Gewitter …",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -566,7 +566,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 230,
+        "x": 220,
         "y": 500,
         "wires": [
             [

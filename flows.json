@@ -984,7 +984,8 @@
         "y": 920,
         "wires": [
             [
-                "f07ff1370d21115f"
+                "f07ff1370d21115f",
+                "0eefaafae23c73de"
             ]
         ]
     },
@@ -1024,6 +1025,29 @@
             [
                 "95ab3bdf0b70e1b7"
             ]
+        ]
+    },
+    {
+        "id": "0eefaafae23c73de",
+        "type": "wled2",
+        "z": "cfe087c2.deeed8",
+        "address": "192.168.179.45",
+        "brightness": "178",
+        "delay": 0,
+        "color1": "#ffffff",
+        "color2": "#ffffff",
+        "color3": "#ffffff",
+        "effect": "0",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "Pipe",
+        "palette": "0",
+        "preset": "7",
+        "state": "on",
+        "x": 410,
+        "y": 980,
+        "wires": [
+            []
         ]
     },
     {
@@ -1659,7 +1683,7 @@
         "z": "f3a0316483eb031e",
         "name": "",
         "pauseType": "delay",
-        "timeout": "3",
+        "timeout": "5",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -1671,7 +1695,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 400,
-        "y": 200,
+        "y": 180,
         "wires": [
             [
                 "064ec8c4e39c0aa7"
@@ -1690,7 +1714,7 @@
         "template": "Du traust Dich nicht.\n\n\n\n\nSchlimmes wird dir wiederfahren.",
         "output": "str",
         "x": 600,
-        "y": 200,
+        "y": 180,
         "wires": [
             [
                 "38a47b1e9e0611d6"

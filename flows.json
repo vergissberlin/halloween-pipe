@@ -418,7 +418,116 @@
         "y": 320,
         "wires": [
             [
-                "12a9b448600bc0c5"
+                "12a9b448600bc0c5",
+                "85c9f98896cc20c1"
+            ]
+        ]
+    },
+    {
+        "id": "136b36b76580f672",
+        "type": "file in",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "binary",
+        "allProps": false,
+        "x": 620,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "85c9f98896cc20c1",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Blitz",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-flash",
+        "payload": "atmo-03-gewitter.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 580,
+        "wires": [
+            [
+                "3bb72b55e05fe373",
+                "ad32cb00df494aae",
+                "045e12dfd8471788"
+            ]
+        ]
+    },
+    {
+        "id": "3bb72b55e05fe373",
+        "type": "function",
+        "z": "cfe087c2.deeed8",
+        "name": "filename",
+        "func": "msg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${msg.payload}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 620,
+        "wires": [
+            [
+                "136b36b76580f672"
+            ]
+        ]
+    },
+    {
+        "id": "ad32cb00df494aae",
+        "type": "wled2",
+        "z": "cfe087c2.deeed8",
+        "address": "192.168.179.45",
+        "brightness": "178",
+        "delay": 0,
+        "color1": "#0005ff",
+        "color2": "#00ff00",
+        "color3": "#ffffff",
+        "effect": "0",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "Pipe",
+        "palette": "0",
+        "preset": "2",
+        "state": "toggle",
+        "x": 390,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "045e12dfd8471788",
+        "type": "template",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Jetzt blitzt das auch noch!",
+        "output": "str",
+        "x": 400,
+        "y": 580,
+        "wires": [
+            [
+                "e5f8a7f8f5d85b65"
             ]
         ]
     }

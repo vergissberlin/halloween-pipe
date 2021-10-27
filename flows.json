@@ -1676,7 +1676,7 @@
         "voice": "Anna",
         "always": true,
         "x": 800,
-        "y": 140,
+        "y": 260,
         "wires": []
     },
     {
@@ -1700,7 +1700,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 140,
-        "y": 140,
+        "y": 260,
         "wires": [
             [
                 "8fc137972390c6d0",
@@ -1720,7 +1720,7 @@
         "template": "Du traust Dich nicht den Knopf zu drücken.",
         "output": "str",
         "x": 380,
-        "y": 140,
+        "y": 260,
         "wires": [
             [
                 "38a47b1e9e0611d6"
@@ -1745,7 +1745,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 400,
-        "y": 180,
+        "y": 300,
         "wires": [
             [
                 "064ec8c4e39c0aa7"
@@ -1761,13 +1761,243 @@
         "fieldType": "msg",
         "format": "text",
         "syntax": "mustache",
-        "template": "Du traust Dich nicht.\n\n\n\n\nSchlimmes wird dir wiederfahren.",
+        "template": "Du traust Dich nicht. Schlimmes wird dir wiederfahren.",
         "output": "str",
         "x": 600,
-        "y": 180,
+        "y": 300,
         "wires": [
             [
                 "38a47b1e9e0611d6"
+            ]
+        ]
+    },
+    {
+        "id": "64e2202178994fdb",
+        "type": "ui_audio",
+        "z": "f3a0316483eb031e",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 800,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "0994841717e7929c",
+        "type": "ui_button",
+        "z": "f3a0316483eb031e",
+        "name": "",
+        "group": "6eafbe0fee95b755",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Ich seh es in deinen Augen …",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-comment-o",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 380,
+        "wires": [
+            [
+                "41cd952d7af8c1ae",
+                "5370319ca03e8d3d"
+            ]
+        ]
+    },
+    {
+        "id": "41cd952d7af8c1ae",
+        "type": "template",
+        "z": "f3a0316483eb031e",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Ich seh es in deinen Augen – Du würdest gern drücken, doch du weißt das es falsch ist. – Etwas schreckliches wird geschehen.",
+        "output": "str",
+        "x": 380,
+        "y": 380,
+        "wires": [
+            [
+                "64e2202178994fdb"
+            ]
+        ]
+    },
+    {
+        "id": "5370319ca03e8d3d",
+        "type": "delay",
+        "z": "f3a0316483eb031e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 420,
+        "wires": [
+            [
+                "3776bfad63d75894"
+            ]
+        ]
+    },
+    {
+        "id": "3776bfad63d75894",
+        "type": "template",
+        "z": "f3a0316483eb031e",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "text",
+        "syntax": "mustache",
+        "template": "Etwas sehr sehr schreckliches.",
+        "output": "str",
+        "x": 600,
+        "y": 420,
+        "wires": [
+            [
+                "64e2202178994fdb"
+            ]
+        ]
+    },
+    {
+        "id": "e60a8ffe9ef34a86",
+        "type": "comment",
+        "z": "f3a0316483eb031e",
+        "name": "Drück den Button",
+        "info": "",
+        "x": 110,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "241cf34916e9069e",
+        "type": "ui_audio",
+        "z": "f3a0316483eb031e",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 800,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "9bdfd0515afcddf9",
+        "type": "ui_button",
+        "z": "f3a0316483eb031e",
+        "name": "",
+        "group": "6eafbe0fee95b755",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Du hast genug …",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-comment-o",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "9be8eeacce871976"
+            ]
+        ]
+    },
+    {
+        "id": "9be8eeacce871976",
+        "type": "template",
+        "z": "f3a0316483eb031e",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Du hast jetzt wirklich genug. Lass auch mal Andere Geisterkinder ran.",
+        "output": "str",
+        "x": 380,
+        "y": 580,
+        "wires": [
+            [
+                "241cf34916e9069e"
+            ]
+        ]
+    },
+    {
+        "id": "8eb8db7c10849c24",
+        "type": "comment",
+        "z": "f3a0316483eb031e",
+        "name": "Genug",
+        "info": "",
+        "x": 70,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "6d72e00df3c6438f",
+        "type": "ui_button",
+        "z": "f3a0316483eb031e",
+        "name": "",
+        "group": "6eafbe0fee95b755",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Letzte Warnung",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "fa-comment-o",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "35643d63061a4f4d"
+            ]
+        ]
+    },
+    {
+        "id": "35643d63061a4f4d",
+        "type": "template",
+        "z": "f3a0316483eb031e",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Das ist meine letzte Warnung.",
+        "output": "str",
+        "x": 380,
+        "y": 620,
+        "wires": [
+            [
+                "241cf34916e9069e"
             ]
         ]
     }

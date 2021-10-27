@@ -193,7 +193,7 @@
     {
         "id": "beca1548a80f59ae",
         "type": "ui_group",
-        "name": "Anlocken - Gewitter",
+        "name": "Gewitter",
         "tab": "c90e79125c88df52",
         "order": 1,
         "disp": true,
@@ -226,7 +226,7 @@
     {
         "id": "16a4ce47298ce30e",
         "type": "ui_group",
-        "name": "Anlocken - Klirrende Höhle",
+        "name": "Klirrende Höhle",
         "tab": "c90e79125c88df52",
         "order": 2,
         "disp": true,
@@ -273,12 +273,32 @@
         "id": "6eafbe0fee95b755",
         "type": "ui_group",
         "name": "Sprache",
+        "tab": "e7472e1bb502c913",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f89571ea64ad72c0",
+        "type": "ui_group",
+        "name": "8 bit",
         "tab": "c90e79125c88df52",
         "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "e7472e1bb502c913",
+        "type": "ui_tab",
+        "name": "Sprache",
+        "icon": "record_voice_over",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "736290796fb8fd24",
@@ -566,7 +586,8 @@
         "mode": "link",
         "links": [
             "b04e1aacd104ae19",
-            "62091c033db2b0d8"
+            "62091c033db2b0d8",
+            "4976f2af9b36b8c1"
         ],
         "x": 815,
         "y": 360,
@@ -1160,6 +1181,336 @@
         ]
     },
     {
+        "id": "94decfa14d106ac5",
+        "type": "file in",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "binary",
+        "allProps": false,
+        "x": 660,
+        "y": 1160,
+        "wires": [
+            [
+                "83e72dd62f492200"
+            ]
+        ]
+    },
+    {
+        "id": "83e72dd62f492200",
+        "type": "ui_audio",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 880,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "6c3554970aea1a23",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Gewitter 8bit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-flash",
+        "payload": "atmo-07-8bit.mp3",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 1160,
+        "wires": [
+            [
+                "a7240601d35514d3",
+                "6569707e690f62a2"
+            ]
+        ]
+    },
+    {
+        "id": "a7240601d35514d3",
+        "type": "function",
+        "z": "cfe087c2.deeed8",
+        "name": "filename",
+        "func": "msg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${msg.payload}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1160,
+        "wires": [
+            [
+                "94decfa14d106ac5"
+            ]
+        ]
+    },
+    {
+        "id": "6569707e690f62a2",
+        "type": "wled2",
+        "z": "cfe087c2.deeed8",
+        "address": "192.168.179.45",
+        "brightness": "178",
+        "delay": 0,
+        "color1": "#0005ff",
+        "color2": "#00ff00",
+        "color3": "#ffffff",
+        "effect": "0",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "Pipe",
+        "palette": "0",
+        "preset": "2",
+        "state": "toggle",
+        "x": 430,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2524441d40117b5a",
+        "type": "comment",
+        "z": "cfe087c2.deeed8",
+        "name": "Anlocken 3 - 8bit",
+        "info": "",
+        "x": 160,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "115cad4f8e93adf4",
+        "type": "file in",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "binary",
+        "allProps": false,
+        "x": 660,
+        "y": 1260,
+        "wires": [
+            [
+                "a3b03f97ae94038c"
+            ]
+        ]
+    },
+    {
+        "id": "a3b03f97ae94038c",
+        "type": "ui_audio",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 880,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "e3baac5d143ddb01",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Knarzen",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-flash",
+        "payload": "anlocken-04-holzboden.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 200,
+        "y": 1260,
+        "wires": [
+            [
+                "414b0bdb777029c0"
+            ]
+        ]
+    },
+    {
+        "id": "414b0bdb777029c0",
+        "type": "function",
+        "z": "cfe087c2.deeed8",
+        "name": "filename",
+        "func": "msg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${msg.payload}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1260,
+        "wires": [
+            [
+                "115cad4f8e93adf4"
+            ]
+        ]
+    },
+    {
+        "id": "2635151b1262a2bd",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Grille",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-flash",
+        "payload": "anlocken-03-grille.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 190,
+        "y": 1300,
+        "wires": [
+            [
+                "414b0bdb777029c0"
+            ]
+        ]
+    },
+    {
+        "id": "8fe724913fbf3063",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Geisterstimme",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-flash",
+        "payload": "geisterstimme-01.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 220,
+        "y": 1340,
+        "wires": [
+            [
+                "414b0bdb777029c0"
+            ]
+        ]
+    },
+    {
+        "id": "9fb1b55fd6d08d78",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Geisterstimme - gejammer",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-flash",
+        "payload": "geisterstimme-02-gejammer.mp3",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 260,
+        "y": 1380,
+        "wires": [
+            [
+                "414b0bdb777029c0"
+            ]
+        ]
+    },
+    {
+        "id": "350159b4e3c0140e",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Geisterstimme - ahhhh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-flash",
+        "payload": "geisterstimme-03-aaaahhhh.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 1420,
+        "wires": [
+            [
+                "414b0bdb777029c0"
+            ]
+        ]
+    },
+    {
+        "id": "ce1172c4922d2e3c",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Geisterstimme",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-flash",
+        "payload": "geisterstimme-01.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 220,
+        "y": 1460,
+        "wires": [
+            [
+                "414b0bdb777029c0"
+            ]
+        ]
+    },
+    {
         "id": "bc131af09f05511d",
         "type": "wled2",
         "z": "6256bac4cdd77435",
@@ -1408,7 +1759,7 @@
         "bgcolor": "",
         "className": "",
         "icon": "fa-button",
-        "payload": "sound-thunder.mp3",
+        "payload": "rohr-02-zisch.wav",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
@@ -1603,7 +1954,7 @@
         "effectSpeed": 128,
         "name": "Pipe",
         "palette": "0",
-        "preset": "8",
+        "preset": "9",
         "state": "on",
         "x": 370,
         "y": 340,

@@ -400,7 +400,7 @@
             [
                 "3bb72b55e05fe373",
                 "ad32cb00df494aae",
-                "045e12dfd8471788"
+                "dad648043560d6d4"
             ]
         ]
     },
@@ -459,7 +459,7 @@
         "syntax": "mustache",
         "template": "Jetzt blitzt das auch noch!",
         "output": "str",
-        "x": 420,
+        "x": 640,
         "y": 280,
         "wires": [
             [
@@ -570,7 +570,7 @@
         "y": 500,
         "wires": [
             [
-                "9a72b4975a4282da"
+                "241c306fed742c38"
             ]
         ]
     },
@@ -585,7 +585,7 @@
         "syntax": "mustache",
         "template": "Oh, ein Gewitter. Mir gruselt es.",
         "output": "str",
-        "x": 660,
+        "x": 420,
         "y": 500,
         "wires": [
             [
@@ -594,11 +594,11 @@
         ]
     },
     {
-        "id": "9a72b4975a4282da",
+        "id": "dad648043560d6d4",
         "type": "delay",
         "z": "cfe087c2.deeed8",
         "name": "",
-        "pauseType": "random",
+        "pauseType": "delay",
         "timeout": "1",
         "timeoutUnits": "seconds",
         "rate": "1",
@@ -610,11 +610,11 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 430,
-        "y": 500,
+        "x": 440,
+        "y": 280,
         "wires": [
             [
-                "241c306fed742c38"
+                "045e12dfd8471788"
             ]
         ]
     },

@@ -61,7 +61,7 @@
     {
         "id": "5ca06bf4c49c29d3",
         "type": "ui_tab",
-        "name": "Home",
+        "name": "Anlocken",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
@@ -167,9 +167,38 @@
     {
         "id": "beca1548a80f59ae",
         "type": "ui_group",
-        "name": "Atmo",
+        "name": "Gewitter",
         "tab": "5ca06bf4c49c29d3",
         "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0df15e8def913d9e",
+        "type": "ui_tab",
+        "name": "Knopfdruck",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1837edce1fd9193e",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "0df15e8def913d9e",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "554f6b1060917fc9",
+        "type": "ui_group",
+        "name": "Knopfdruck",
+        "tab": "5ca06bf4c49c29d3",
+        "order": 2,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -590,7 +619,8 @@
         "z": "cfe087c2.deeed8",
         "name": "gewitter",
         "links": [
-            "f7c7da0526de9dd8"
+            "f7c7da0526de9dd8",
+            "82a5d3bc2496ba52"
         ],
         "x": 55,
         "y": 440,
@@ -623,6 +653,163 @@
             [
                 "b7740e7d0840ba73"
             ]
+        ]
+    },
+    {
+        "id": "6aad9528bd8e4909",
+        "type": "comment",
+        "z": "cfe087c2.deeed8",
+        "name": "Knopf",
+        "info": "",
+        "x": 130,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "0dfc5432a694705f",
+        "type": "file in",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "binary",
+        "allProps": false,
+        "x": 600,
+        "y": 820,
+        "wires": [
+            [
+                "224b153c9e186270"
+            ]
+        ]
+    },
+    {
+        "id": "6c215a705c312c36",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Knopf",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-button",
+        "payload": "sound-thunder.mp3",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 780,
+        "wires": [
+            [
+                "2cdaf47682c02b71",
+                "dff562cb6732e294",
+                "c5d1a1325670e9ba"
+            ]
+        ]
+    },
+    {
+        "id": "2cdaf47682c02b71",
+        "type": "function",
+        "z": "cfe087c2.deeed8",
+        "name": "filename",
+        "func": "msg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${msg.payload}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 820,
+        "wires": [
+            [
+                "0dfc5432a694705f"
+            ]
+        ]
+    },
+    {
+        "id": "dff562cb6732e294",
+        "type": "wled2",
+        "z": "cfe087c2.deeed8",
+        "address": "192.168.179.45",
+        "brightness": "178",
+        "delay": 0,
+        "color1": "#ffffff",
+        "color2": "#ffffff",
+        "color3": "#ffffff",
+        "effect": "0",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "Pipe",
+        "palette": "0",
+        "preset": "4",
+        "state": "on",
+        "x": 370,
+        "y": 860,
+        "wires": [
+            [
+                "4b16fefc2fa4e521"
+            ]
+        ]
+    },
+    {
+        "id": "c5d1a1325670e9ba",
+        "type": "template",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Jetzt blitzt das auch noch!",
+        "output": "str",
+        "x": 380,
+        "y": 780,
+        "wires": [
+            [
+                "224b153c9e186270"
+            ]
+        ]
+    },
+    {
+        "id": "224b153c9e186270",
+        "type": "ui_audio",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 820,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "4b16fefc2fa4e521",
+        "type": "delay",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "pauseType": "random",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "3",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 860,
+        "wires": [
+            []
         ]
     }
 ]

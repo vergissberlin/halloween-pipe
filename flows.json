@@ -314,7 +314,7 @@
         "z": "cfe087c2.deeed8",
         "name": "",
         "filename": "",
-        "format": "",
+        "format": "stream",
         "chunk": false,
         "sendError": false,
         "encoding": "binary",

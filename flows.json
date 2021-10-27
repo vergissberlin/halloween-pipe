@@ -697,6 +697,65 @@
         ]
     },
     {
+        "id": "c8f28a0c2d25a39d",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "STOPP",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-stop",
+        "payload": "anlocken-02-geisterhauchen.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 560,
+        "wires": [
+            [
+                "bd5aa10575eba52e"
+            ]
+        ]
+    },
+    {
+        "id": "bd5aa10575eba52e",
+        "type": "function",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "func": "msg.reset = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 560,
+        "wires": [
+            [
+                "841fcf70d748b971"
+            ]
+        ]
+    },
+    {
+        "id": "841fcf70d748b971",
+        "type": "ui_audio",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 860,
+        "y": 560,
+        "wires": []
+    },
+    {
         "id": "bc131af09f05511d",
         "type": "wled2",
         "z": "6256bac4cdd77435",

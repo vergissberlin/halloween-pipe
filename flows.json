@@ -148,7 +148,7 @@
         "name": "Pipe",
         "palette": "0",
         "preset": "2",
-        "state": "on",
+        "state": "toggle",
         "x": 430,
         "y": 220,
         "wires": [
@@ -172,7 +172,8 @@
         "y": 340,
         "wires": [
             [
-                "dd0806a105f74f0c"
+                "dd0806a105f74f0c",
+                "711b4a34344c2c04"
             ]
         ]
     },

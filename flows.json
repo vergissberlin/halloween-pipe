@@ -335,5 +335,34 @@
         "x": 560,
         "y": 440,
         "wires": []
+    },
+    {
+        "id": "176fee6cae5a0266",
+        "type": "inject",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Ich glaub ich spinne, das funktioniert.",
+        "payloadType": "str",
+        "x": 310,
+        "y": 500,
+        "wires": [
+            [
+                "e5f8a7f8f5d85b65"
+            ]
+        ]
     }
 ]

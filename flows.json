@@ -1253,7 +1253,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 210,
+        "x": 190,
         "y": 1160,
         "wires": [
             [
@@ -1365,7 +1365,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 200,
+        "x": 180,
         "y": 1260,
         "wires": [
             [
@@ -1412,7 +1412,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 190,
+        "x": 170,
         "y": 1300,
         "wires": [
             [
@@ -1440,8 +1440,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 200,
-        "y": 1480,
+        "x": 180,
+        "y": 1600,
         "wires": [
             [
                 "7b07bcd390eb45b7"
@@ -1468,8 +1468,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 240,
-        "y": 1520,
+        "x": 220,
+        "y": 1480,
         "wires": [
             [
                 "7b07bcd390eb45b7"
@@ -1496,8 +1496,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 220,
-        "y": 1560,
+        "x": 200,
+        "y": 1520,
         "wires": [
             [
                 "7b07bcd390eb45b7"
@@ -1524,8 +1524,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 200,
-        "y": 1600,
+        "x": 180,
+        "y": 1560,
         "wires": [
             [
                 "7b07bcd390eb45b7"
@@ -1612,7 +1612,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 190,
+        "x": 170,
         "y": 1340,
         "wires": [
             [
@@ -1671,8 +1671,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 180,
-        "y": 1760,
+        "x": 160,
+        "y": 1800,
         "wires": [
             [
                 "7a8eafe23b8b702c",
@@ -1752,8 +1752,36 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 200,
-        "y": 1860,
+        "x": 180,
+        "y": 1760,
+        "wires": [
+            [
+                "7a8eafe23b8b702c"
+            ]
+        ]
+    },
+    {
+        "id": "b87c1bfb8a96fdfe",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "f89571ea64ad72c0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Deamon",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "my_library_music",
+        "payload": "atmo-12-daemon.mp3",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 1840,
         "wires": [
             [
                 "7a8eafe23b8b702c"

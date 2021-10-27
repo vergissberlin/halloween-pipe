@@ -261,7 +261,8 @@
         "wires": [
             [
                 "dd0806a105f74f0c",
-                "711b4a34344c2c04"
+                "711b4a34344c2c04",
+                "90c89aa4e50b9551"
             ]
         ]
     },
@@ -411,6 +412,37 @@
         "y": 500,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "f370b4d91af58b27",
+        "type": "ui_audio",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 620,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "90c89aa4e50b9551",
+        "type": "template",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 450,
+        "y": 400,
+        "wires": [
+            [
+                "f370b4d91af58b27"
+            ]
         ]
     }
 ]

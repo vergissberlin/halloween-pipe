@@ -456,7 +456,7 @@
         "bgcolor": "",
         "className": "",
         "icon": "fa-flash",
-        "payload": "atmo-03-gewitter.wav",
+        "payload": "sound-thunder.mp3",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",

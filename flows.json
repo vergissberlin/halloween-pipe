@@ -147,8 +147,8 @@
         "effectSpeed": 128,
         "name": "Testing",
         "palette": "0",
-        "preset": 0,
-        "state": "toggle",
+        "preset": "2",
+        "state": "on",
         "x": 440,
         "y": 220,
         "wires": [

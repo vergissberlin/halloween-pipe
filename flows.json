@@ -224,7 +224,7 @@
         "id": "711b4a34344c2c04",
         "type": "wled2",
         "z": "cfe087c2.deeed8",
-        "address": "192.168.179.14",
+        "address": "",
         "brightness": "178",
         "delay": 0,
         "color1": "#0005ff",

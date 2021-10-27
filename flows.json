@@ -332,9 +332,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Ich glaub ich spinne, das funktioniert.",
+        "payload": "Scherr dich zum Kirbis!",
         "payloadType": "str",
-        "x": 390,
+        "x": 440,
         "y": 500,
         "wires": [
             [

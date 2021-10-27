@@ -802,7 +802,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
+        "template": "Du hast den Knopf gedrückt",
         "output": "str",
         "x": 660,
         "y": 220,

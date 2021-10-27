@@ -184,12 +184,12 @@
     {
         "id": "beca1548a80f59ae",
         "type": "ui_group",
-        "name": "Gewitter",
+        "name": "Anlocken - Gewitter",
         "tab": "5ca06bf4c49c29d3",
         "order": 1,
         "disp": true,
         "width": "6",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -197,7 +197,7 @@
         "type": "ui_group",
         "name": "Knopfdruck",
         "tab": "5ca06bf4c49c29d3",
-        "order": 2,
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -208,10 +208,21 @@
         "type": "ui_group",
         "name": "Rutschen",
         "tab": "5ca06bf4c49c29d3",
-        "order": 3,
+        "order": 4,
         "disp": true,
         "width": "6",
         "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "16a4ce47298ce30e",
+        "type": "ui_group",
+        "name": "Anlocken - Klirrende Höhle",
+        "tab": "5ca06bf4c49c29d3",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
         "className": ""
     },
     {
@@ -325,35 +336,6 @@
         "x": 160,
         "y": 80,
         "wires": []
-    },
-    {
-        "id": "904fae2cb53a34ce",
-        "type": "inject",
-        "z": "cfe087c2.deeed8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 170,
-        "y": 20,
-        "wires": [
-            [
-                "85c9f98896cc20c1"
-            ]
-        ]
     },
     {
         "id": "136b36b76580f672",
@@ -528,7 +510,8 @@
         "name": "",
         "mode": "link",
         "links": [
-            "b04e1aacd104ae19"
+            "b04e1aacd104ae19",
+            "62091c033db2b0d8"
         ],
         "x": 815,
         "y": 360,
@@ -735,7 +718,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 420,
         "y": 560,
         "wires": [
             [
@@ -754,6 +737,135 @@
         "x": 860,
         "y": 560,
         "wires": []
+    },
+    {
+        "id": "335b33761018c33f",
+        "type": "file in",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "binary",
+        "allProps": false,
+        "x": 640,
+        "y": 720,
+        "wires": [
+            [
+                "8cd3eb9a2a19dd36"
+            ]
+        ]
+    },
+    {
+        "id": "8cd3eb9a2a19dd36",
+        "type": "ui_audio",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 860,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "d9086597b5a840a5",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "16a4ce47298ce30e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Gewitter Atmo",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-flash",
+        "payload": "atmo-03-gewitter.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 200,
+        "y": 720,
+        "wires": [
+            [
+                "0d7bde8a4dc8d1fb",
+                "6e848ce72b915b19"
+            ]
+        ]
+    },
+    {
+        "id": "0d7bde8a4dc8d1fb",
+        "type": "function",
+        "z": "cfe087c2.deeed8",
+        "name": "filename",
+        "func": "msg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${msg.payload}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 720,
+        "wires": [
+            [
+                "335b33761018c33f"
+            ]
+        ]
+    },
+    {
+        "id": "6e848ce72b915b19",
+        "type": "wled2",
+        "z": "cfe087c2.deeed8",
+        "address": "192.168.179.45",
+        "brightness": "178",
+        "delay": 0,
+        "color1": "#0005ff",
+        "color2": "#00ff00",
+        "color3": "#ffffff",
+        "effect": "0",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "Pipe",
+        "palette": "0",
+        "preset": "2",
+        "state": "toggle",
+        "x": 410,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d25bfd6e82b740f9",
+        "type": "comment",
+        "z": "cfe087c2.deeed8",
+        "name": "Anlocken 1 - Klirrende Höhle",
+        "info": "",
+        "x": 180,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "62091c033db2b0d8",
+        "type": "link in",
+        "z": "cfe087c2.deeed8",
+        "name": "gewitter",
+        "links": [
+            "f7c7da0526de9dd8",
+            "82a5d3bc2496ba52"
+        ],
+        "x": 75,
+        "y": 720,
+        "wires": [
+            [
+                "d9086597b5a840a5"
+            ]
+        ]
     },
     {
         "id": "bc131af09f05511d",

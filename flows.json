@@ -1047,10 +1047,12 @@
         "palette": "0",
         "preset": "5",
         "state": "toggle",
-        "x": 650,
+        "x": 490,
         "y": 160,
         "wires": [
-            []
+            [
+                "ec72feca8f2f0323"
+            ]
         ]
     },
     {
@@ -1084,7 +1086,7 @@
         "group": "beca1548a80f59ae",
         "voice": "Anna",
         "always": true,
-        "x": 860,
+        "x": 720,
         "y": 220,
         "wires": []
     },
@@ -1099,7 +1101,7 @@
         "syntax": "mustache",
         "template": "Du hast den Knopf gedrückt",
         "output": "str",
-        "x": 660,
+        "x": 500,
         "y": 220,
         "wires": [
             [
@@ -1165,6 +1167,29 @@
             [
                 "2a191f0815548f03"
             ]
+        ]
+    },
+    {
+        "id": "ec72feca8f2f0323",
+        "type": "delay",
+        "z": "6256bac4cdd77435",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "3",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 740,
+        "y": 160,
+        "wires": [
+            []
         ]
     },
     {

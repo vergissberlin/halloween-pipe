@@ -81,7 +81,7 @@
             "darkTheme": {
                 "default": "#097479",
                 "baseColor": "#ff7b00",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "baseFont": "Century Gothic,CenturyGothic,AppleGothic,sans-serif",
                 "edited": true,
                 "reset": false
             },
@@ -134,7 +134,7 @@
                     "edited": false
                 },
                 "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                    "value": "Century Gothic,CenturyGothic,AppleGothic,sans-serif"
                 }
             },
             "angularTheme": {

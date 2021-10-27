@@ -176,32 +176,6 @@
         "className": ""
     },
     {
-        "id": "79a4ebc4.3a83b4",
-        "type": "inject",
-        "z": "cfe087c2.deeed8",
-        "name": "Gewitter",
-        "props": [
-            {
-                "p": "filename",
-                "v": "/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/atmo-03-gewitter.wav",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 140,
-        "y": 400,
-        "wires": [
-            [
-                "736290796fb8fd24"
-            ]
-        ]
-    },
-    {
         "id": "fbaa4800.af2a78",
         "type": "debug",
         "z": "cfe087c2.deeed8",
@@ -384,38 +358,29 @@
         "bgcolor": "",
         "className": "",
         "icon": "fa-flash",
-        "payload": "/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/atmo-03-gewitter.wav",
+        "payload": "atmo-03-gewitter.wav",
         "payloadType": "str",
-        "topic": "filename",
+        "topic": "topic",
         "topicType": "msg",
         "x": 140,
         "y": 440,
         "wires": [
             [
-                "dd0806a105f74f0c",
-                "e2533fdeac4022db"
+                "6e3a02d09fe7e6e6"
             ]
         ]
     },
     {
-        "id": "e2533fdeac4022db",
-        "type": "change",
+        "id": "6e3a02d09fe7e6e6",
+        "type": "function",
         "z": "cfe087c2.deeed8",
-        "name": "rename",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload",
-                "pt": "msg",
-                "to": "filename",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
+        "name": "filename",
+        "func": "msg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${msg.payload}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 300,
         "y": 440,
         "wires": [

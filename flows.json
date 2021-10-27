@@ -1086,7 +1086,7 @@
         "group": "beca1548a80f59ae",
         "voice": "Anna",
         "always": true,
-        "x": 720,
+        "x": 680,
         "y": 220,
         "wires": []
     },
@@ -1146,7 +1146,7 @@
         "group": "beca1548a80f59ae",
         "voice": "Anna",
         "always": true,
-        "x": 720,
+        "x": 680,
         "y": 280,
         "wires": []
     },
@@ -1175,7 +1175,7 @@
         "z": "6256bac4cdd77435",
         "name": "",
         "pauseType": "delay",
-        "timeout": "2",
+        "timeout": "3",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -1186,7 +1186,32 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 740,
+        "x": 700,
+        "y": 160,
+        "wires": [
+            [
+                "697d7fd065d155e8"
+            ]
+        ]
+    },
+    {
+        "id": "697d7fd065d155e8",
+        "type": "wled2",
+        "z": "6256bac4cdd77435",
+        "address": "192.168.179.45",
+        "brightness": "178",
+        "delay": 0,
+        "color1": "#ffffff",
+        "color2": "#ffffff",
+        "color3": "#ffffff",
+        "effect": "0",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "Pipe",
+        "palette": "0",
+        "preset": "6",
+        "state": "toggle",
+        "x": 910,
         "y": 160,
         "wires": [
             []

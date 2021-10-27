@@ -235,7 +235,7 @@
         "effectSpeed": 128,
         "name": "Pipe",
         "palette": "0",
-        "preset": 0,
+        "preset": "2",
         "state": "toggle",
         "x": 430,
         "y": 220,

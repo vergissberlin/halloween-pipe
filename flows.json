@@ -383,7 +383,7 @@
         "color": "",
         "bgcolor": "",
         "className": "",
-        "icon": "flash",
+        "icon": "fa-flash",
         "payload": "/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/atmo-03-gewitter.wav",
         "payloadType": "str",
         "topic": "filename",

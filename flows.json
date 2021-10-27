@@ -1047,7 +1047,7 @@
         "palette": "0",
         "preset": "5",
         "state": "toggle",
-        "x": 850,
+        "x": 650,
         "y": 160,
         "wires": [
             []

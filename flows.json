@@ -1622,7 +1622,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Da ist wohl was runtergefallen – na dann auf die Knie!",
+        "template": "Da ist wohl was runtergefallen – ha ha!",
         "output": "str",
         "x": 600,
         "y": 260,

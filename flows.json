@@ -184,12 +184,13 @@
         "name": "",
         "active": true,
         "tosidebar": true,
-        "console": false,
+        "console": true,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 450,
+        "x": 460,
         "y": 340,
         "wires": []
     }

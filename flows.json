@@ -543,7 +543,7 @@
         "voice": "Anna",
         "always": true,
         "x": 860,
-        "y": 460,
+        "y": 440,
         "wires": []
     },
     {
@@ -567,7 +567,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 200,
-        "y": 460,
+        "y": 440,
         "wires": [
             [
                 "241c306fed742c38"
@@ -586,7 +586,7 @@
         "template": "Oh, ein Gewitter. Mir gruselt es.",
         "output": "str",
         "x": 420,
-        "y": 460,
+        "y": 440,
         "wires": [
             [
                 "ac989f40170ab9f9"
@@ -627,7 +627,7 @@
         "voice": "Anna",
         "always": true,
         "x": 860,
-        "y": 580,
+        "y": 500,
         "wires": []
     },
     {
@@ -651,7 +651,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 180,
-        "y": 580,
+        "y": 500,
         "wires": [
             [
                 "24047ef38125bc21"
@@ -670,7 +670,7 @@
         "encoding": "binary",
         "allProps": false,
         "x": 640,
-        "y": 580,
+        "y": 500,
         "wires": [
             [
                 "b6288b32423a2177"
@@ -689,7 +689,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 580,
+        "y": 500,
         "wires": [
             [
                 "74834306b1babad3"

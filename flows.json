@@ -232,7 +232,7 @@
         "name": "Anlocken",
         "icon": "dashboard",
         "order": 1,
-        "disabled": true,
+        "disabled": false,
         "hidden": false
     },
     {

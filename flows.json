@@ -206,7 +206,7 @@
         "type": "ui_group",
         "name": "Knopfdruck",
         "tab": "5ca06bf4c49c29d3",
-        "order": 3,
+        "order": 1,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -217,7 +217,7 @@
         "type": "ui_group",
         "name": "Rutschen",
         "tab": "5ca06bf4c49c29d3",
-        "order": 4,
+        "order": 2,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -306,6 +306,17 @@
         "name": "Geisterstimme",
         "tab": "c90e79125c88df52",
         "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e2dae0dde951b712",
+        "type": "ui_group",
+        "name": "Verjagen",
+        "tab": "5ca06bf4c49c29d3",
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1429,11 +1440,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 220,
-        "y": 1340,
+        "x": 200,
+        "y": 1480,
         "wires": [
             [
-                "414b0bdb777029c0"
+                "7b07bcd390eb45b7"
             ]
         ]
     },
@@ -1457,11 +1468,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 260,
-        "y": 1380,
+        "x": 240,
+        "y": 1520,
         "wires": [
             [
-                "414b0bdb777029c0"
+                "7b07bcd390eb45b7"
             ]
         ]
     },
@@ -1485,11 +1496,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 240,
-        "y": 1420,
+        "x": 220,
+        "y": 1560,
         "wires": [
             [
-                "414b0bdb777029c0"
+                "7b07bcd390eb45b7"
             ]
         ]
     },
@@ -1513,11 +1524,239 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 220,
-        "y": 1460,
+        "x": 200,
+        "y": 1600,
+        "wires": [
+            [
+                "7b07bcd390eb45b7"
+            ]
+        ]
+    },
+    {
+        "id": "8f342cf52cb10e30",
+        "type": "file in",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "binary",
+        "allProps": false,
+        "x": 660,
+        "y": 1480,
+        "wires": [
+            [
+                "38bfdb01424acddb"
+            ]
+        ]
+    },
+    {
+        "id": "38bfdb01424acddb",
+        "type": "ui_audio",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 880,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "7b07bcd390eb45b7",
+        "type": "function",
+        "z": "cfe087c2.deeed8",
+        "name": "filename",
+        "func": "msg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${msg.payload}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1480,
+        "wires": [
+            [
+                "8f342cf52cb10e30"
+            ]
+        ]
+    },
+    {
+        "id": "7ecafade4cf15cdf",
+        "type": "comment",
+        "z": "cfe087c2.deeed8",
+        "name": "Anlocken 4 - Geisterstimme",
+        "info": "",
+        "x": 200,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "258119f5b79226f0",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "f89571ea64ad72c0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Wind",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "bubble_chart",
+        "payload": "atmo-08-wind.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 190,
+        "y": 1340,
         "wires": [
             [
                 "414b0bdb777029c0"
+            ]
+        ]
+    },
+    {
+        "id": "b1d26dc7a2e903a5",
+        "type": "file in",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "binary",
+        "allProps": false,
+        "x": 660,
+        "y": 1760,
+        "wires": [
+            [
+                "1d1e9afdb7062fef"
+            ]
+        ]
+    },
+    {
+        "id": "1d1e9afdb7062fef",
+        "type": "ui_audio",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 880,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "47cfdc244bad6a1b",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "f89571ea64ad72c0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Ghosting",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "my_library_music",
+        "payload": "atmo-07-8bit.mp3",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 1760,
+        "wires": [
+            [
+                "7a8eafe23b8b702c",
+                "498c85b6229acba2"
+            ]
+        ]
+    },
+    {
+        "id": "7a8eafe23b8b702c",
+        "type": "function",
+        "z": "cfe087c2.deeed8",
+        "name": "filename",
+        "func": "msg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${msg.payload}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1760,
+        "wires": [
+            [
+                "b1d26dc7a2e903a5"
+            ]
+        ]
+    },
+    {
+        "id": "498c85b6229acba2",
+        "type": "wled2",
+        "z": "cfe087c2.deeed8",
+        "address": "192.168.179.45",
+        "brightness": "178",
+        "delay": 0,
+        "color1": "#0005ff",
+        "color2": "#00ff00",
+        "color3": "#ffffff",
+        "effect": "0",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "Pipe",
+        "palette": "0",
+        "preset": "2",
+        "state": "toggle",
+        "x": 430,
+        "y": 1800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "54a3953ab62994ea",
+        "type": "comment",
+        "z": "cfe087c2.deeed8",
+        "name": "Anlocken 5 - mixed",
+        "info": "",
+        "x": 170,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "5e555f126917035d",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "f89571ea64ad72c0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Halloween Intro",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "my_library_music",
+        "payload": "atmo-11-halloween-intro.mp3",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 200,
+        "y": 1860,
+        "wires": [
+            [
+                "7a8eafe23b8b702c"
             ]
         ]
     },
@@ -2077,6 +2316,410 @@
         "y": 340,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "ffc08385f2eda516",
+        "type": "comment",
+        "z": "1e5ddd0e32b32d19",
+        "name": "Verjagen",
+        "info": "",
+        "x": 140,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "1dc7ec21289b411b",
+        "type": "file in",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "binary",
+        "allProps": false,
+        "x": 600,
+        "y": 540,
+        "wires": [
+            [
+                "3b3a0788e20bbec1"
+            ]
+        ]
+    },
+    {
+        "id": "97d55ca35ccb0155",
+        "type": "ui_button",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "group": "e2dae0dde951b712",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Verjagen",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-flash",
+        "payload": "verjagen-01-blitzfeder.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 500,
+        "wires": [
+            [
+                "be92ea9c475c6fb5",
+                "5668f44d9a448c08",
+                "6369c70e26c6be9e"
+            ]
+        ]
+    },
+    {
+        "id": "be92ea9c475c6fb5",
+        "type": "function",
+        "z": "1e5ddd0e32b32d19",
+        "name": "filename",
+        "func": "msg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${msg.payload}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 540,
+        "wires": [
+            [
+                "1dc7ec21289b411b"
+            ]
+        ]
+    },
+    {
+        "id": "5668f44d9a448c08",
+        "type": "wled2",
+        "z": "1e5ddd0e32b32d19",
+        "address": "192.168.179.45",
+        "brightness": "178",
+        "delay": 0,
+        "color1": "#ffffff",
+        "color2": "#ffffff",
+        "color3": "#ffffff",
+        "effect": "0",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "Pipe",
+        "palette": "0",
+        "preset": "4",
+        "state": "on",
+        "x": 370,
+        "y": 580,
+        "wires": [
+            [
+                "96afef61c2bb43c6"
+            ]
+        ]
+    },
+    {
+        "id": "6369c70e26c6be9e",
+        "type": "template",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Ich habe Dich gewarnt – Verschwinde!",
+        "output": "str",
+        "x": 380,
+        "y": 500,
+        "wires": [
+            [
+                "3b3a0788e20bbec1"
+            ]
+        ]
+    },
+    {
+        "id": "3b3a0788e20bbec1",
+        "type": "ui_audio",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 820,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "96afef61c2bb43c6",
+        "type": "delay",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "pauseType": "random",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "3",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 580,
+        "wires": [
+            [
+                "b1e149338248c560"
+            ]
+        ]
+    },
+    {
+        "id": "0ba280ca5167e55b",
+        "type": "ui_audio",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 820,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "a25eefbc3a98b0e9",
+        "type": "ui_button",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "group": "e2dae0dde951b712",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Du hast genug …",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-comment-o",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 860,
+        "wires": [
+            [
+                "d641969c981d6c4c"
+            ]
+        ]
+    },
+    {
+        "id": "d641969c981d6c4c",
+        "type": "template",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Du hast jetzt wirklich genug. Lass auch mal Andere Geisterkinder ran.",
+        "output": "str",
+        "x": 380,
+        "y": 860,
+        "wires": [
+            [
+                "0ba280ca5167e55b"
+            ]
+        ]
+    },
+    {
+        "id": "caf860d5f3bf4886",
+        "type": "comment",
+        "z": "1e5ddd0e32b32d19",
+        "name": "Verjagen - Sprache",
+        "info": "",
+        "x": 170,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "59f5aa597036c329",
+        "type": "ui_button",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "group": "e2dae0dde951b712",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Letzte Warnung",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "fa-comment-o",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 900,
+        "wires": [
+            [
+                "20087d31b4275323"
+            ]
+        ]
+    },
+    {
+        "id": "20087d31b4275323",
+        "type": "template",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Das ist meine letzte Warnung.",
+        "output": "str",
+        "x": 380,
+        "y": 900,
+        "wires": [
+            [
+                "0ba280ca5167e55b"
+            ]
+        ]
+    },
+    {
+        "id": "b1e149338248c560",
+        "type": "wled2",
+        "z": "1e5ddd0e32b32d19",
+        "address": "192.168.179.45",
+        "brightness": "178",
+        "delay": 0,
+        "color1": "#ffffff",
+        "color2": "#ffffff",
+        "color3": "#ffffff",
+        "effect": "0",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "Pipe",
+        "palette": "0",
+        "preset": "4",
+        "state": "off",
+        "x": 810,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1c3788f0e79d7acc",
+        "type": "ui_button",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "group": "e2dae0dde951b712",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Wolf",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "sentiment_very_dissatisfied",
+        "payload": "verjagen-02-wolf.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 660,
+        "wires": [
+            [
+                "3b1655c6f53c0a59"
+            ]
+        ]
+    },
+    {
+        "id": "bee84c76e0ce760e",
+        "type": "file in",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "binary",
+        "allProps": false,
+        "x": 600,
+        "y": 660,
+        "wires": [
+            [
+                "37a91a3041736f08"
+            ]
+        ]
+    },
+    {
+        "id": "37a91a3041736f08",
+        "type": "ui_audio",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 820,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "3b1655c6f53c0a59",
+        "type": "function",
+        "z": "1e5ddd0e32b32d19",
+        "name": "filename",
+        "func": "msg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${msg.payload}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 660,
+        "wires": [
+            [
+                "bee84c76e0ce760e"
+            ]
+        ]
+    },
+    {
+        "id": "8ec3358e629fbf7a",
+        "type": "ui_button",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "group": "e2dae0dde951b712",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Geisterstimme",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "sentiment_very_dissatisfied",
+        "payload": "verjagen-03-geisterstimme.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 700,
+        "wires": [
+            [
+                "3b1655c6f53c0a59"
+            ]
         ]
     },
     {

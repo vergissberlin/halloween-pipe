@@ -215,51 +215,6 @@
         "className": ""
     },
     {
-        "id": "711b4a34344c2c04",
-        "type": "wled2",
-        "z": "cfe087c2.deeed8",
-        "address": "192.168.179.45",
-        "brightness": "178",
-        "delay": 0,
-        "color1": "#0005ff",
-        "color2": "#00ff00",
-        "color3": "#ffffff",
-        "effect": "0",
-        "effectIntensity": 128,
-        "effectSpeed": 128,
-        "name": "Pipe",
-        "palette": "0",
-        "preset": "3",
-        "state": "toggle",
-        "x": 810,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "030b1d936d624a56",
-        "type": "mqtt in",
-        "z": "cfe087c2.deeed8",
-        "name": "button",
-        "topic": "stat/button/POWER",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "e18e49af189f5df6",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 110,
-        "y": 140,
-        "wires": [
-            [
-                "711b4a34344c2c04",
-                "90c89aa4e50b9551"
-            ]
-        ]
-    },
-    {
         "id": "736290796fb8fd24",
         "type": "file in",
         "z": "cfe087c2.deeed8",
@@ -361,47 +316,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "f370b4d91af58b27",
-        "type": "ui_audio",
-        "z": "cfe087c2.deeed8",
-        "name": "",
-        "group": "beca1548a80f59ae",
-        "voice": "Anna",
-        "always": true,
-        "x": 820,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "90c89aa4e50b9551",
-        "type": "template",
-        "z": "cfe087c2.deeed8",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
-        "output": "str",
-        "x": 620,
-        "y": 200,
-        "wires": [
-            [
-                "f370b4d91af58b27"
-            ]
-        ]
-    },
-    {
-        "id": "f1a5cd061cf2fbe8",
-        "type": "comment",
-        "z": "cfe087c2.deeed8",
-        "name": "Button",
-        "info": "",
-        "x": 90,
-        "y": 60,
-        "wires": []
     },
     {
         "id": "e2579192a18880f1",
@@ -821,6 +735,92 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "bc131af09f05511d",
+        "type": "wled2",
+        "z": "6256bac4cdd77435",
+        "address": "192.168.179.45",
+        "brightness": "178",
+        "delay": 0,
+        "color1": "#0005ff",
+        "color2": "#00ff00",
+        "color3": "#ffffff",
+        "effect": "0",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "Pipe",
+        "palette": "0",
+        "preset": "3",
+        "state": "toggle",
+        "x": 850,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "57e65b5d4038433c",
+        "type": "mqtt in",
+        "z": "6256bac4cdd77435",
+        "name": "button",
+        "topic": "stat/button/POWER",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "e18e49af189f5df6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "bc131af09f05511d",
+                "ee6810a6b59be184"
+            ]
+        ]
+    },
+    {
+        "id": "a0c2e0729d82b6c0",
+        "type": "ui_audio",
+        "z": "6256bac4cdd77435",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 860,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ee6810a6b59be184",
+        "type": "template",
+        "z": "6256bac4cdd77435",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 660,
+        "y": 220,
+        "wires": [
+            [
+                "a0c2e0729d82b6c0"
+            ]
+        ]
+    },
+    {
+        "id": "e8de312ca3490da8",
+        "type": "comment",
+        "z": "6256bac4cdd77435",
+        "name": "Button",
+        "info": "",
+        "x": 130,
+        "y": 80,
+        "wires": []
     },
     {
         "id": "70f6ef42c11d751b",

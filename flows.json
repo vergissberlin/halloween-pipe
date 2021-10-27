@@ -383,7 +383,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
+        "template": "Oh, ein Gewitter. Mir gruselt es.",
         "output": "str",
         "x": 400,
         "y": 440,

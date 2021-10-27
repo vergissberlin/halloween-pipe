@@ -779,7 +779,7 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "label": "Gewitter Atmo",
+        "label": "Atmo - Klirrende",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -851,20 +851,105 @@
         "wires": []
     },
     {
-        "id": "62091c033db2b0d8",
-        "type": "link in",
+        "id": "9cbc03867826f2fc",
+        "type": "file in",
         "z": "cfe087c2.deeed8",
-        "name": "gewitter",
-        "links": [
-            "f7c7da0526de9dd8",
-            "82a5d3bc2496ba52"
-        ],
-        "x": 75,
-        "y": 720,
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "binary",
+        "allProps": false,
+        "x": 640,
+        "y": 820,
         "wires": [
             [
-                "d9086597b5a840a5"
+                "548e759a6e2783ce"
             ]
+        ]
+    },
+    {
+        "id": "548e759a6e2783ce",
+        "type": "ui_audio",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 860,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "eb1897728293b214",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "16a4ce47298ce30e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Atmo - Tropfen",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-flash",
+        "payload": "atmo-06-tropfsteinhoehle.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 200,
+        "y": 820,
+        "wires": [
+            [
+                "bf8db562461e809e",
+                "a408692f567b3f6e"
+            ]
+        ]
+    },
+    {
+        "id": "bf8db562461e809e",
+        "type": "function",
+        "z": "cfe087c2.deeed8",
+        "name": "filename",
+        "func": "msg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${msg.payload}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 820,
+        "wires": [
+            [
+                "9cbc03867826f2fc"
+            ]
+        ]
+    },
+    {
+        "id": "a408692f567b3f6e",
+        "type": "wled2",
+        "z": "cfe087c2.deeed8",
+        "address": "192.168.179.45",
+        "brightness": "178",
+        "delay": 0,
+        "color1": "#0005ff",
+        "color2": "#00ff00",
+        "color3": "#ffffff",
+        "effect": "0",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "Pipe",
+        "palette": "0",
+        "preset": "2",
+        "state": "toggle",
+        "x": 410,
+        "y": 860,
+        "wires": [
+            []
         ]
     },
     {

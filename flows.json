@@ -1223,7 +1223,7 @@
         "type": "debug",
         "z": "6256bac4cdd77435",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,

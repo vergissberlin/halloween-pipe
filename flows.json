@@ -225,8 +225,8 @@
         "sendError": false,
         "encoding": "binary",
         "allProps": false,
-        "x": 620,
-        "y": 480,
+        "x": 640,
+        "y": 180,
         "wires": [
             [
                 "e5f8a7f8f5d85b65"
@@ -241,8 +241,8 @@
         "group": "beca1548a80f59ae",
         "voice": "Anna",
         "always": true,
-        "x": 840,
-        "y": 440,
+        "x": 860,
+        "y": 140,
         "wires": []
     },
     {
@@ -265,8 +265,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 180,
-        "y": 440,
+        "x": 200,
+        "y": 140,
         "wires": [
             [
                 "6e3a02d09fe7e6e6",
@@ -286,8 +286,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 480,
+        "x": 420,
+        "y": 180,
         "wires": [
             [
                 "736290796fb8fd24"
@@ -311,8 +311,8 @@
         "palette": "0",
         "preset": "2",
         "state": "toggle",
-        "x": 390,
-        "y": 520,
+        "x": 410,
+        "y": 220,
         "wires": [
             []
         ]
@@ -323,8 +323,8 @@
         "z": "cfe087c2.deeed8",
         "name": "Anlocken 1 - Gewitter",
         "info": "",
-        "x": 140,
-        "y": 380,
+        "x": 160,
+        "y": 80,
         "wires": []
     },
     {
@@ -338,8 +338,8 @@
         "syntax": "mustache",
         "template": "Oh, ein Gewitter. Mir gruselt es.",
         "output": "str",
-        "x": 620,
-        "y": 440,
+        "x": 640,
+        "y": 140,
         "wires": [
             [
                 "e5f8a7f8f5d85b65"
@@ -367,8 +367,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 150,
-        "y": 320,
+        "x": 170,
+        "y": 20,
         "wires": [
             [
                 "85c9f98896cc20c1"
@@ -386,8 +386,8 @@
         "sendError": false,
         "encoding": "binary",
         "allProps": false,
-        "x": 620,
-        "y": 620,
+        "x": 640,
+        "y": 320,
         "wires": [
             [
                 "1555f71c4a588393"
@@ -414,8 +414,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 150,
-        "y": 580,
+        "x": 170,
+        "y": 280,
         "wires": [
             [
                 "3bb72b55e05fe373",
@@ -435,8 +435,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 620,
+        "x": 420,
+        "y": 320,
         "wires": [
             [
                 "136b36b76580f672"
@@ -460,8 +460,8 @@
         "palette": "0",
         "preset": "4",
         "state": "on",
-        "x": 390,
-        "y": 660,
+        "x": 410,
+        "y": 360,
         "wires": [
             [
                 "e17d98d71b9a6a2d"
@@ -479,8 +479,8 @@
         "syntax": "mustache",
         "template": "Jetzt blitzt das auch noch!",
         "output": "str",
-        "x": 400,
-        "y": 580,
+        "x": 420,
+        "y": 280,
         "wires": [
             [
                 "1555f71c4a588393"
@@ -495,8 +495,8 @@
         "group": "beca1548a80f59ae",
         "voice": "Anna",
         "always": true,
-        "x": 840,
-        "y": 580,
+        "x": 860,
+        "y": 280,
         "wires": []
     },
     {
@@ -516,8 +516,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 610,
-        "y": 660,
+        "x": 630,
+        "y": 360,
         "wires": [
             [
                 "f7c7da0526de9dd8"
@@ -533,8 +533,8 @@
         "links": [
             "b04e1aacd104ae19"
         ],
-        "x": 795,
-        "y": 660,
+        "x": 815,
+        "y": 360,
         "wires": []
     },
     {
@@ -546,8 +546,8 @@
             "f7c7da0526de9dd8",
             "82a5d3bc2496ba52"
         ],
-        "x": 55,
-        "y": 440,
+        "x": 75,
+        "y": 140,
         "wires": [
             [
                 "12a9b448600bc0c5"
@@ -571,169 +571,12 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 390,
-        "y": 440,
+        "x": 410,
+        "y": 140,
         "wires": [
             [
                 "b7740e7d0840ba73"
             ]
-        ]
-    },
-    {
-        "id": "6aad9528bd8e4909",
-        "type": "comment",
-        "z": "cfe087c2.deeed8",
-        "name": "Knopf",
-        "info": "",
-        "x": 130,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "0dfc5432a694705f",
-        "type": "file in",
-        "z": "cfe087c2.deeed8",
-        "name": "",
-        "filename": "",
-        "format": "",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "binary",
-        "allProps": false,
-        "x": 600,
-        "y": 820,
-        "wires": [
-            [
-                "224b153c9e186270"
-            ]
-        ]
-    },
-    {
-        "id": "6c215a705c312c36",
-        "type": "ui_button",
-        "z": "cfe087c2.deeed8",
-        "name": "",
-        "group": "554f6b1060917fc9",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "label": "Knopf",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "fa-button",
-        "payload": "sound-thunder.mp3",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 130,
-        "y": 780,
-        "wires": [
-            [
-                "2cdaf47682c02b71",
-                "dff562cb6732e294",
-                "c5d1a1325670e9ba"
-            ]
-        ]
-    },
-    {
-        "id": "2cdaf47682c02b71",
-        "type": "function",
-        "z": "cfe087c2.deeed8",
-        "name": "filename",
-        "func": "msg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${msg.payload}`;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 380,
-        "y": 820,
-        "wires": [
-            [
-                "0dfc5432a694705f"
-            ]
-        ]
-    },
-    {
-        "id": "dff562cb6732e294",
-        "type": "wled2",
-        "z": "cfe087c2.deeed8",
-        "address": "192.168.179.45",
-        "brightness": "178",
-        "delay": 0,
-        "color1": "#ffffff",
-        "color2": "#ffffff",
-        "color3": "#ffffff",
-        "effect": "0",
-        "effectIntensity": 128,
-        "effectSpeed": 128,
-        "name": "Pipe",
-        "palette": "0",
-        "preset": "4",
-        "state": "on",
-        "x": 370,
-        "y": 860,
-        "wires": [
-            [
-                "4b16fefc2fa4e521"
-            ]
-        ]
-    },
-    {
-        "id": "c5d1a1325670e9ba",
-        "type": "template",
-        "z": "cfe087c2.deeed8",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "Jetzt blitzt das auch noch!",
-        "output": "str",
-        "x": 380,
-        "y": 780,
-        "wires": [
-            [
-                "224b153c9e186270"
-            ]
-        ]
-    },
-    {
-        "id": "224b153c9e186270",
-        "type": "ui_audio",
-        "z": "cfe087c2.deeed8",
-        "name": "",
-        "group": "beca1548a80f59ae",
-        "voice": "Anna",
-        "always": true,
-        "x": 820,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "4b16fefc2fa4e521",
-        "type": "delay",
-        "z": "cfe087c2.deeed8",
-        "name": "",
-        "pauseType": "random",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "3",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 590,
-        "y": 860,
-        "wires": [
-            []
         ]
     },
     {

@@ -1037,15 +1037,15 @@
         "address": "192.168.179.45",
         "brightness": "178",
         "delay": 0,
-        "color1": "#0005ff",
-        "color2": "#00ff00",
+        "color1": "#ffffff",
+        "color2": "#ffffff",
         "color3": "#ffffff",
         "effect": "0",
         "effectIntensity": 128,
         "effectSpeed": 128,
         "name": "Pipe",
         "palette": "0",
-        "preset": "3",
+        "preset": "5",
         "state": "toggle",
         "x": 850,
         "y": 160,
@@ -1071,7 +1071,8 @@
         "wires": [
             [
                 "bc131af09f05511d",
-                "ee6810a6b59be184"
+                "ee6810a6b59be184",
+                "421c8d4c620f47b6"
             ]
         ]
     },
@@ -1115,6 +1116,56 @@
         "x": 130,
         "y": 80,
         "wires": []
+    },
+    {
+        "id": "2a191f0815548f03",
+        "type": "file in",
+        "z": "6256bac4cdd77435",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "binary",
+        "allProps": false,
+        "x": 500,
+        "y": 340,
+        "wires": [
+            [
+                "ea8259568ce47695"
+            ]
+        ]
+    },
+    {
+        "id": "ea8259568ce47695",
+        "type": "ui_audio",
+        "z": "6256bac4cdd77435",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 720,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "421c8d4c620f47b6",
+        "type": "function",
+        "z": "6256bac4cdd77435",
+        "name": "filename",
+        "func": "let sounds = [\n    'knopf-01.wav',\n    'knopf-02.wav',\n    ]\n\nmsg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${Math.round(Math.random()*2)`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 3,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 340,
+        "wires": [
+            [
+                "2a191f0815548f03"
+            ]
+        ]
     },
     {
         "id": "70f6ef42c11d751b",

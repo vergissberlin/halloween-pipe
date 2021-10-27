@@ -953,6 +953,84 @@
         ]
     },
     {
+        "id": "a5858f5daf6d1ce3",
+        "type": "ui_audio",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 860,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "ba9d5880c959ec94",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Megaschrei",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-volume-up",
+        "payload": "person-01-megaschrei.mp3",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 190,
+        "y": 920,
+        "wires": [
+            [
+                "f07ff1370d21115f"
+            ]
+        ]
+    },
+    {
+        "id": "95ab3bdf0b70e1b7",
+        "type": "file in",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "binary",
+        "allProps": false,
+        "x": 640,
+        "y": 920,
+        "wires": [
+            [
+                "a5858f5daf6d1ce3"
+            ]
+        ]
+    },
+    {
+        "id": "f07ff1370d21115f",
+        "type": "function",
+        "z": "cfe087c2.deeed8",
+        "name": "filename",
+        "func": "msg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${msg.payload}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 920,
+        "wires": [
+            [
+                "95ab3bdf0b70e1b7"
+            ]
+        ]
+    },
+    {
         "id": "bc131af09f05511d",
         "type": "wled2",
         "z": "6256bac4cdd77435",

@@ -277,7 +277,7 @@
             [
                 "6e3a02d09fe7e6e6",
                 "27f0769c7a23cd31",
-                "b7740e7d0840ba73"
+                "fc996fbef5eab875"
             ]
         ]
     },
@@ -385,7 +385,7 @@
         "syntax": "mustache",
         "template": "Oh, ein Gewitter. Mir gruselt es.",
         "output": "str",
-        "x": 400,
+        "x": 620,
         "y": 440,
         "wires": [
             [
@@ -597,6 +597,31 @@
         "wires": [
             [
                 "12a9b448600bc0c5"
+            ]
+        ]
+    },
+    {
+        "id": "fc996fbef5eab875",
+        "type": "delay",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "pauseType": "random",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "3",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 440,
+        "wires": [
+            [
+                "b7740e7d0840ba73"
             ]
         ]
     }

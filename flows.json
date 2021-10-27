@@ -314,7 +314,7 @@
         "z": "cfe087c2.deeed8",
         "name": "",
         "filename": "",
-        "format": "stream",
+        "format": "",
         "chunk": false,
         "sendError": false,
         "encoding": "binary",
@@ -401,7 +401,7 @@
         "id": "e2533fdeac4022db",
         "type": "change",
         "z": "cfe087c2.deeed8",
-        "name": "",
+        "name": "rename",
         "rules": [
             {
                 "t": "move",
@@ -416,7 +416,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 340,
+        "x": 300,
         "y": 440,
         "wires": [
             [

@@ -1155,7 +1155,7 @@
         "type": "function",
         "z": "6256bac4cdd77435",
         "name": "filename",
-        "func": "let sounds = [\n    'knopf-01.wav',\n    'knopf-02.wav',\n    ];\n\nmsg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${sounds[Math.round(Math.random())*2]}`;\nreturn msg;",
+        "func": "let sounds = [\n    'knopf-01.wav',\n    'knopf-02.wav',\n    ];\n\nmsg.filename = `/Users/andre.lademann/Development/vergissberlin/halloween-pipe/assets/sounds/${sounds[Math.floor(Math.random())*2]}`;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",

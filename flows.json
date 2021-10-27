@@ -241,7 +241,7 @@
         "name": "mqtt.andrelademann.de",
         "broker": "mqtt.abdrelademann.de",
         "port": "1883",
-        "clientid": "",
+        "clientid": "nodered",
         "autoConnect": true,
         "usetls": false,
         "protocolVersion": "4",

@@ -239,7 +239,7 @@
         "id": "1454de1933d597e6",
         "type": "mqtt-broker",
         "name": "mqtt.andrelademann.de",
-        "broker": "mqtt.abdrelademann.de",
+        "broker": "mqtt.andrelademann.de",
         "port": "1883",
         "clientid": "nodered",
         "autoConnect": true,

@@ -226,7 +226,7 @@
         "encoding": "binary",
         "allProps": false,
         "x": 640,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
                 "e5f8a7f8f5d85b65"
@@ -270,8 +270,7 @@
         "wires": [
             [
                 "6e3a02d09fe7e6e6",
-                "27f0769c7a23cd31",
-                "fc996fbef5eab875"
+                "27f0769c7a23cd31"
             ]
         ]
     },
@@ -287,7 +286,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
                 "736290796fb8fd24"
@@ -312,7 +311,7 @@
         "preset": "2",
         "state": "toggle",
         "x": 410,
-        "y": 220,
+        "y": 180,
         "wires": [
             []
         ]
@@ -326,25 +325,6 @@
         "x": 160,
         "y": 80,
         "wires": []
-    },
-    {
-        "id": "b7740e7d0840ba73",
-        "type": "template",
-        "z": "cfe087c2.deeed8",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "Oh, ein Gewitter. Mir gruselt es.",
-        "output": "str",
-        "x": 640,
-        "y": 140,
-        "wires": [
-            [
-                "e5f8a7f8f5d85b65"
-            ]
-        ]
     },
     {
         "id": "904fae2cb53a34ce",
@@ -525,19 +505,6 @@
         ]
     },
     {
-        "id": "f7c7da0526de9dd8",
-        "type": "link out",
-        "z": "cfe087c2.deeed8",
-        "name": "",
-        "mode": "link",
-        "links": [
-            "b04e1aacd104ae19"
-        ],
-        "x": 815,
-        "y": 360,
-        "wires": []
-    },
-    {
         "id": "b04e1aacd104ae19",
         "type": "link in",
         "z": "cfe087c2.deeed8",
@@ -555,7 +522,79 @@
         ]
     },
     {
-        "id": "fc996fbef5eab875",
+        "id": "f7c7da0526de9dd8",
+        "type": "link out",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "b04e1aacd104ae19"
+        ],
+        "x": 815,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ac989f40170ab9f9",
+        "type": "ui_audio",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "voice": "Anna",
+        "always": true,
+        "x": 880,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "bb5bb05e798b0188",
+        "type": "ui_button",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "group": "beca1548a80f59ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "\"Oh Gewitter\"",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-ghost",
+        "payload": "atmo-03-gewitter.wav",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 220,
+        "y": 500,
+        "wires": [
+            [
+                "9a72b4975a4282da"
+            ]
+        ]
+    },
+    {
+        "id": "241c306fed742c38",
+        "type": "template",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Oh, ein Gewitter. Mir gruselt es.",
+        "output": "str",
+        "x": 660,
+        "y": 500,
+        "wires": [
+            [
+                "ac989f40170ab9f9"
+            ]
+        ]
+    },
+    {
+        "id": "9a72b4975a4282da",
         "type": "delay",
         "z": "cfe087c2.deeed8",
         "name": "",
@@ -571,11 +610,11 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 410,
-        "y": 140,
+        "x": 430,
+        "y": 500,
         "wires": [
             [
-                "b7740e7d0840ba73"
+                "241c306fed742c38"
             ]
         ]
     },

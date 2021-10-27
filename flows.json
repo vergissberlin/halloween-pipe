@@ -80,6 +80,7 @@
         "type": "ui_tab",
         "name": "Ereignisse",
         "icon": "dashboard",
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -185,7 +186,7 @@
         "id": "beca1548a80f59ae",
         "type": "ui_group",
         "name": "Anlocken - Gewitter",
-        "tab": "5ca06bf4c49c29d3",
+        "tab": "c90e79125c88df52",
         "order": 1,
         "disp": true,
         "width": "6",
@@ -218,12 +219,21 @@
         "id": "16a4ce47298ce30e",
         "type": "ui_group",
         "name": "Anlocken - Klirrende Höhle",
-        "tab": "5ca06bf4c49c29d3",
+        "tab": "c90e79125c88df52",
         "order": 2,
         "disp": true,
         "width": "6",
         "collapse": true,
         "className": ""
+    },
+    {
+        "id": "c90e79125c88df52",
+        "type": "ui_tab",
+        "name": "Anlocken",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": true,
+        "hidden": false
     },
     {
         "id": "736290796fb8fd24",

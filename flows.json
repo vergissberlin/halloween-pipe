@@ -784,7 +784,7 @@
         "color": "",
         "bgcolor": "",
         "className": "",
-        "icon": "fa-pagelines",
+        "icon": "fa-bell",
         "payload": "atmo-04-Klirrende_Hoehle.wav",
         "payloadType": "str",
         "topic": "topic",

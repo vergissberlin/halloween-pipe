@@ -785,7 +785,7 @@
         "bgcolor": "",
         "className": "",
         "icon": "fa-flash",
-        "payload": "atmo-03-gewitter.wav",
+        "payload": "atmo-04-Klirrende_Hoehle.wav",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",

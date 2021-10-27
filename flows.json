@@ -1131,7 +1131,7 @@
         "encoding": "binary",
         "allProps": false,
         "x": 500,
-        "y": 340,
+        "y": 280,
         "wires": [
             [
                 "ea8259568ce47695"
@@ -1147,7 +1147,7 @@
         "voice": "Anna",
         "always": true,
         "x": 720,
-        "y": 340,
+        "y": 280,
         "wires": []
     },
     {
@@ -1161,8 +1161,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
-        "y": 340,
+        "x": 340,
+        "y": 280,
         "wires": [
             [
                 "2a191f0815548f03"

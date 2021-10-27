@@ -1622,7 +1622,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Da ist wohl was runtergefallen – na dann bück Dich einmal.",
+        "template": "Da ist wohl was runtergefallen – na dann auf die Knie!",
         "output": "str",
         "x": 600,
         "y": 260,

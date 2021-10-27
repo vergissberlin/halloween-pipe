@@ -137,7 +137,7 @@
         "type": "wled2",
         "z": "cfe087c2.deeed8",
         "address": "192.168.179.14",
-        "brightness": "39",
+        "brightness": "161",
         "delay": 0,
         "color1": "#0005ff",
         "color2": "#00ff00",
@@ -145,11 +145,11 @@
         "effect": "1",
         "effectIntensity": 128,
         "effectSpeed": 128,
-        "name": "Testing",
+        "name": "Pipe",
         "palette": "0",
         "preset": "2",
         "state": "on",
-        "x": 440,
+        "x": 430,
         "y": 220,
         "wires": [
             []

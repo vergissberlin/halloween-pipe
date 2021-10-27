@@ -1047,6 +1047,56 @@
         "x": 410,
         "y": 980,
         "wires": [
+            [
+                "726616b1fde5cec0"
+            ]
+        ]
+    },
+    {
+        "id": "726616b1fde5cec0",
+        "type": "delay",
+        "z": "cfe087c2.deeed8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "3",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 660,
+        "y": 980,
+        "wires": [
+            [
+                "79c81e1850d8c18e"
+            ]
+        ]
+    },
+    {
+        "id": "79c81e1850d8c18e",
+        "type": "wled2",
+        "z": "cfe087c2.deeed8",
+        "address": "192.168.179.45",
+        "brightness": "16",
+        "delay": 0,
+        "color1": "#001eff",
+        "color2": "#ffffff",
+        "color3": "#ffffff",
+        "effect": "0",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "Pipe",
+        "palette": "0",
+        "preset": "0",
+        "state": "on",
+        "x": 870,
+        "y": 980,
+        "wires": [
             []
         ]
     },

@@ -542,7 +542,7 @@
         "group": "beca1548a80f59ae",
         "voice": "Anna",
         "always": true,
-        "x": 880,
+        "x": 860,
         "y": 460,
         "wires": []
     },
@@ -626,7 +626,7 @@
         "group": "beca1548a80f59ae",
         "voice": "Anna",
         "always": true,
-        "x": 880,
+        "x": 860,
         "y": 580,
         "wires": []
     },
@@ -669,7 +669,7 @@
         "sendError": false,
         "encoding": "binary",
         "allProps": false,
-        "x": 720,
+        "x": 640,
         "y": 580,
         "wires": [
             [

@@ -1555,7 +1555,7 @@
         "bgcolor": "",
         "className": "",
         "icon": "fa-button",
-        "payload": "sound-thunder.mp3",
+        "payload": "geisterstimme-04-auslachen.mp3",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
@@ -1565,7 +1565,7 @@
             [
                 "3896b4a57b150a56",
                 "2989e32670892e84",
-                "4d626c0d97759281"
+                "1879eab90faf75ca"
             ]
         ]
     },
@@ -1622,9 +1622,9 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Jetzt blitzt das auch noch!",
+        "template": "Na dann büg Dich mal.",
         "output": "str",
-        "x": 380,
+        "x": 600,
         "y": 260,
         "wires": [
             [
@@ -1649,7 +1649,7 @@
         "type": "delay",
         "z": "1e5ddd0e32b32d19",
         "name": "",
-        "pauseType": "random",
+        "pauseType": "delay",
         "timeout": "1",
         "timeoutUnits": "seconds",
         "rate": "1",
@@ -1661,7 +1661,57 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 590,
+        "x": 620,
+        "y": 340,
+        "wires": [
+            [
+                "832d3a6999dbc88a"
+            ]
+        ]
+    },
+    {
+        "id": "1879eab90faf75ca",
+        "type": "delay",
+        "z": "1e5ddd0e32b32d19",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 400,
+        "y": 260,
+        "wires": [
+            [
+                "4d626c0d97759281"
+            ]
+        ]
+    },
+    {
+        "id": "832d3a6999dbc88a",
+        "type": "wled2",
+        "z": "1e5ddd0e32b32d19",
+        "address": "192.168.179.45",
+        "brightness": "178",
+        "delay": 0,
+        "color1": "#ffffff",
+        "color2": "#ffffff",
+        "color3": "#ffffff",
+        "effect": "0",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "Pipe",
+        "palette": "0",
+        "preset": "4",
+        "state": "off",
+        "x": 830,
         "y": 340,
         "wires": [
             []

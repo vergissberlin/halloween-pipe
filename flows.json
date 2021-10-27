@@ -1096,7 +1096,7 @@
         "type": "mqtt in",
         "z": "6256bac4cdd77435",
         "name": "button",
-        "topic": "stat/button/POWER",
+        "topic": "halloween/stat/button_ED72E1/POWER",
         "qos": "2",
         "datatype": "utf8",
         "broker": "1454de1933d597e6",
